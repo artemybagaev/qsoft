@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var cars = {
+            carOne: {
+                'name': 'Shkoda',
+                'year': '2008',
+                'regNumber': 'кт574оо'
+            },
+            
+            carTwo: {
+                'name': 'Ferrari',
+                'year': '2014',
+                'regNumber': 'рк574ку' 
+            },
+            
+            carThree: {
+                'name': 'Porshe',
+                'year': '2018',
+                'regNumber': 'ро777мм' 
+            }
+        }
+        
+        var userOne = {
+            name: 'Андрей',
+            email: 'andrey@gmail.com',
+            burth_date: '1970',
+            cars: [cars.carOne, cars.carTwo]
+        };
+        
+        
+        document.write(`${userOne.name}, ${userOne.email} (${userOne.burth_date}) - владеет ${userOne.cars.length} машинами` + '<br>');
+        
+        for (let i = 0; i < userOne.cars.length; i++) {
+            document.write(`${userOne.cars[i].name} (${userOne.cars[i].year}) ${userOne.cars[i].regNumber} - ${userOne.name}` + '<br>');
+        }
+    </script>
+</body>
+</html>
